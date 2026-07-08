@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'trash.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2>🗑️ Trash Page</h2>
+
+    <div class="top-buttons">
+        <a class="restore-all" href="{% url 'trestore_all' %}">Restore All</a>
+        <a class="delete-all" href="{% url 'tdelete_all' %}">Delete All</a>
+    </div>
+
+    {% for i in data %}
+
+    <div class="card">
+
+        <span class="title">ID {{ i.id }}</span>
+
+        <p><strong>Title :</strong> {{ i.title }}</p>
+
+        <p><strong>Description :</strong> {{ i.desc }}</p>
+
+        <div class="buttons">
+            <a class="restore" href="{% url 'trestore' i.id %}">Restore</a>
+
+            <a class="delete" href="{% url 'tdelete' i.id %}">Delete</a>
+        </div>
+
+    </div>
+
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

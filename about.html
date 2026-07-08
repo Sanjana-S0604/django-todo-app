@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<center>
+
+    <h2>About Page</h2>
+
+    <div class="about-box">
+        <h3>To-Do List Application</h3>
+
+        <p>
+            This is a Django-based To-Do List application that helps users
+            manage their daily tasks efficiently.
+        </p>
+
+        <ul>
+            <li>Add new tasks</li>
+            <li>Update existing tasks</li>
+            <li>Mark tasks as completed</li>
+            <li>Move tasks to the trash</li>
+            <li>Restore or permanently delete tasks</li>
+        </ul>
+    </div>
+
+</center>
+
+{% endblock %}

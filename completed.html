@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'completed.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2>✅ Completed Tasks</h2>
+
+    <div class="top-buttons">
+        <a class="restore-all" href="{% url 'crestore_all' %}">Restore All</a>
+        <a class="delete-all" href="{% url 'cdelete_all' %}">Delete All</a>
+    </div>
+
+    {% for i in data %}
+
+    <div class="card">
+
+        <span class="title">{{i.title}}</span>
+
+        <p>{{i.desc}}</p>
+
+        <div class="buttons">
+            <a class="restore" href="{% url 'crestore' i.id %}">Restore</a>
+            <a class="delete" href="{% url 'cdelete' i.id %}">Delete</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

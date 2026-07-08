@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>All Tasks</h1>
+
+    <div class="top-btns">
+        <a class="complete-all" href="{% url 'hcomplete_all' %}">Complete All</a>
+        <a class="delete-all" href="{% url 'hdelete_all' %}">Delete All</a>
+    </div>
+
+    {% for i in data %}
+
+    <div class="task">
+
+        <p><b>ID:</b> {{i.id}}</p>
+
+        <h2>{{i.title}}</h2>
+
+        <p>{{i.desc}}</p>
+
+        <div class="buttons">
+            <a class="update" href="{% url 'update' i.id %}">Update</a>
+
+            <a class="complete" href="{% url 'hcomplete' i.id %}">Completed</a>
+
+            <a class="delete" href="{% url 'hdelete' i.id %}">Delete</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

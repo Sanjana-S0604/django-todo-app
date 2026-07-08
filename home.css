@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f4f6f9;
+}
+
+.container{
+    width: 700px;
+    margin: 40px auto;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.top-btns{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.top-btns a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.complete-all{
+    background-color: #28a745;
+}
+
+.delete-all{
+    background-color: #dc3545;
+}
+
+.task{
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.task a{
+    color: #333;
+    text-decoration: none;
+}
+
+.task p{
+    color: #555;
+    margin: 10px 0;
+}
+
+.buttons{
+    margin-top: 15px;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.update{
+    background-color: #0d6efd;
+}
+
+.complete{
+    background-color: #28a745;
+}
+
+.delete{
+    background-color: #dc3545;
+}
+
+.buttons a:hover,
+.top-btns a:hover{
+    opacity: 0.8;
+}
